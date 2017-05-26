@@ -1,0 +1,51 @@
+{"1" : {
+    "10:10-11:50":"Structure PR(HKD+ST+BBR)",
+    "11:50-1:30":"Surveying (TB)",
+    "1:30-4:50":"Building Drawing for Group B / Survey Pr. for Group A"
+}
+}
+
+"1" : {
+    "11:00-12:40":"Geology (Package)",
+    "12:40-2:20":"Geology Practical (Package)"
+}
+
+"1" : {
+    "10:10-11:50":"Irrigation (NT)",
+    "11:50-1:30":"Building (SB)",
+    "1:30-3:10":"English (AB)",
+    "3:10-4:50":"Transport PR (US+AU+BR)"
+}
+"1" : {
+    "10:10-11:50":"Const Mgmt (KS)",
+    "11:50-1:30":"Comp Technics (YS)",
+    "1:30-3:10":"EPP (ST)",
+    "3:10-4:50":"Elective II"
+}
+
+"2": {
+    "10:10-11:50":"Soil (PD)",
+    "11:50-1:30":"Soil Practical (PD+BBR+TKC)",
+    "1:30-3:10":"Probability (GN)",
+    "3:10-4:50":"Structure (HKD)"
+}
+
+"2": {
+    "10:10-11:50":"Structures",
+    "11:50-1:30":"Probability (GN)",
+    "1:30-3:10":"Hydraulics (DK)",
+    "3:10-4:50":"Hydraulics Practical"
+} 
+"2": {
+    "11:00-12:40":"Building (SB)",
+    "12:40-1:30":"Economics (CB)",
+    "1:30-3:10":"Probability (GN)",
+    "3:10-4:50":"Structure (HKD)"
+} 
+
+
+"3" : 
+{
+"11:00-12:40" : "Geology (Package)",
+"12:40-2:20" : "Geology Practical Package"
+}

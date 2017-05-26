@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aashiz.ercroutine.fragments.ScheduleFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <Spinner
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayOfWeek"
+        android:fontFamily="monospace"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:padding="@dimen/padding_amount_list"
+        android:entries="@array/days_array"
+
+         />
+
+    <ListView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/routineList"
+        android:layout_margin="@dimen/padding_amount_list"></ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="@dimen/textsize_of_listitem"
+        android:id="@+id/empty"/>
+    </LinearLayout>
+</FrameLayout>

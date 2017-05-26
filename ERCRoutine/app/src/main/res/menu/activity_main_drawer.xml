@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Class Schedule" />
+        <item
+            android:id="@+id/nav_routine"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Exam Routine" />
+        <item
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Notes" />
+        <item
+            android:id="@+id/nav_syllabus"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Syllabus" />
+        <item
+            android:id="@+id/nav_Choose"
+            android:title="Choose Your Department"
+            />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:title="About the Developer" />
+        </menu>
+    </item>
+    <item android:title="Updates">
+        <menu>
+            <item
+                android:id="@+id/nav_updateapp"
+                android:title="Update This App" />
+        </menu>
+    </item>
+
+</menu>

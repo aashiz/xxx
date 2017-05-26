@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">ERC Routine</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="errorText">Coming Soon!! Please Check for Updates!!</string>
+    <string name="aboutText">Developer:\nAashiz Poudel\n\n\nSpecial Thanks To Arun Katwal\n
+        \n
+        Credits to Manish Kumar Shah for Syllabus
+        \n\n
+        Shoutout to : \n
+        Prajan,Aakash,Bikash,Abhisekh,Sagar,Pankaj,Aatiz,Suman \n
+        and everyone from ERC :)
+        \n
+        For Bug Reports and any queries , Contact me on my facebook. :)
+        \n
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="coming_soon">Coming Soon!! Stay Tuned</string>
+    <string-array name="days_array">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+
+    </string-array>
+    <string-array name="department_array">
+        <item>BME</item>
+        <item>BCE</item>
+        <item>BCT</item>
+        <item>BEX</item>
+        <item>BAG</item>
+        <item>BArch</item>
+        <item>BEL</item>
+    </string-array>
+    <string-array name="year_array">
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+        <item>IV</item>
+
+    </string-array>
+    <string name="banner_ad_unit_id">ca-app-pub-3059651012850041/6226729418</string>
+    <string name="app_version">300</string>
+    <string name="fbLink">http://facebook.com/mr.aashiz</string>
+    <string name="officialSite">http://ercroutine.byethost12.com/latest.apk</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

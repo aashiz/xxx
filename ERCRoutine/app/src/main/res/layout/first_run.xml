@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_firstrun">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:text="Choose your Departments"
+        android:layout_marginBottom="10dp"/>
+
+    <Spinner
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/department"
+        android:entries="@array/department_array"
+        android:background="#CEE2EB"
+        android:spinnerMode="dialog"
+        android:padding="@dimen/firstrun_spinner_padding" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:text="Choose your Year"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Spinner
+        android:layout_height="wrap_content"
+        android:id="@+id/year"
+        android:layout_width="match_parent"
+        android:background="#CEE2EB"
+        android:entries="@array/year_array"
+
+        android:alpha="1.0"
+        android:padding="@dimen/firstrun_spinner_padding"
+        android:spinnerMode="dialog" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:text="Go"
+        android:layout_margin="@dimen/firstrun_margin_button"/>
+
+</LinearLayout>
+

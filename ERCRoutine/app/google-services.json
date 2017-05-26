@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "546747429259",
+    "firebase_url": "https://erc-routine-project.firebaseio.com",
+    "project_id": "erc-routine-project",
+    "storage_bucket": "erc-routine-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546747429259:android:26f9f1a6ba478064",
+        "android_client_info": {
+          "package_name": "com.aashiz.ercroutine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546747429259-331e6og177kiokm98ef0820pdgieak3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aashiz.ercroutine",
+            "certificate_hash": "19811c50b6ccba4c4dd8716db867e7ce4c7c2d00"
+          }
+        },
+        {
+          "client_id": "546747429259-uv0gl4h2i7re4b9qll1jo0c9q3u5m83c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAktAa6c2FIs_2r_xCqgDGTUOIzhReOAiY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546747429259-uv0gl4h2i7re4b9qll1jo0c9q3u5m83c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
