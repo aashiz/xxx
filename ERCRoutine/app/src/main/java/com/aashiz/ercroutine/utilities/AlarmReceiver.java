@@ -1,29 +1,21 @@
 package com.aashiz.ercroutine.utilities;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
-import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.aashiz.ercroutine.MainActivity;
-import com.aashiz.ercroutine.R;
 import com.aashiz.ercroutine.RemainderService;
-import com.aashiz.ercroutine.SilentUpdater;
-
-import org.json.JSONObject;
 
 import java.util.Calendar;
 
@@ -99,7 +91,7 @@ public class AlarmReceiver  extends BroadcastReceiver{
 
         this.parent = context;
         this.intent = intent ;
-        mManager = (NotificationManager)context.getSystemService(context.NOTIFICATION_SERVICE);
+        mManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
         c= context;
         Log.d("SERVICE","received broadcast intent" + intent.getAction());
         long time = intent.getLongExtra("TIME",0);
@@ -116,11 +108,7 @@ public class AlarmReceiver  extends BroadcastReceiver{
                 if( (d.getTimeInMillis() - c.getTimeInMillis()) <  60*60*1000){
                     populate() ;
                     //msg = "Hello Worlds";
-                    if(msg == null) {
-                        msg = "No classes Today!!";
-                        showNotification(msg);
-                        return;
-                    }
+                    msg= msg == null ? "Hurray! No classes Today" : msg  ;
                     showNotification(msg);
                     return;
                 }

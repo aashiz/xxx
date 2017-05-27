@@ -45,8 +45,8 @@ public class RemainderService extends Service {
         if(!isSet){
             Intent i = new Intent(getBaseContext(),AlarmReceiver.class);
             Calendar c = Calendar.getInstance();
-            c.set(Calendar.HOUR_OF_DAY,14);
-            c.set(Calendar.MINUTE,00);
+            c.set(Calendar.HOUR_OF_DAY,8);
+            c.set(Calendar.MINUTE,15);
             i.putExtra("TIME",c.getTimeInMillis());
             i.putExtra("FLAG",true);
             PendingIntent in = PendingIntent.getBroadcast(getBaseContext(),0,i,PendingIntent.FLAG_UPDATE_CURRENT);
