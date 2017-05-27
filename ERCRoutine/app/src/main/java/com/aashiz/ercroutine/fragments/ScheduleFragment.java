@@ -1,11 +1,12 @@
 package com.aashiz.ercroutine.fragments;
+
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -67,15 +68,7 @@ public class ScheduleFragment extends MainFragment {
       spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
           @Override
           public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-              if(isAlreadyInitialized) {
-//                  Toast.makeText(getContext(), "-+" + position, Toast.LENGTH_SHORT).show();
-//                  fetchData(department,year,position+1);
-//                  setListAdapter(new listadapter(getActivity().getBaseContext(),data));
-                  loader = new DataLoader(getActivity(),department,year,position+1);
-                  setListAdapter();
-
-              }
-              isAlreadyInitialized = true;
+              SpinSelected(position) ;
           }
 
           @Override
@@ -83,6 +76,18 @@ public class ScheduleFragment extends MainFragment {
 
           }
       });
+    }
+
+    private void SpinSelected(int position) {
+        if(isAlreadyInitialized) {
+//                  Toast.makeText(getContext(), "-+" + position, Toast.LENGTH_SHORT).show();
+//                  fetchData(department,year,position+1);
+//                  setListAdapter(new listadapter(getActivity().getBaseContext(),data));
+            loader = new DataLoader(getActivity(),department,year,position+1);
+            setListAdapter();
+
+        }
+        isAlreadyInitialized = true;
     }
 
     public void setListAdapter() {
@@ -137,17 +142,28 @@ public class ScheduleFragment extends MainFragment {
     public void onSwipeLeft() {
         super.onSwipeLeft();
         flag = false ;
+        int nDay = getNewDay();
         Log.d("SWIPE","Swipe Left");
-        spin.setSelection(getNewDay());
-        spin.callOnClick();
+        spin.setSelection(nDay);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+            spin.callOnClick();
+        }else {
+            SpinSelected(nDay);
+        }
     }
 
     @Override
     public void onSwipeRight() {
         flag = true ;
         super.onSwipeRight();
-        spin.setSelection(getNewDay() );
-        spin.callOnClick();
+        int nDay = getNewDay();
+        spin.setSelection(nDay );
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+            spin.callOnClick();
+        }else {
+            SpinSelected(nDay);
+
+        }
         Log.d("SWIPE","Swipe Right");
     }
 

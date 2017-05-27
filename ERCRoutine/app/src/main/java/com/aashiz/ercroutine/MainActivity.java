@@ -4,7 +4,6 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -21,15 +20,10 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.aashiz.ercroutine.fragments.About;
-import com.aashiz.ercroutine.fragments.ComingSoon;
 import com.aashiz.ercroutine.fragments.ExamRoutine;
 import com.aashiz.ercroutine.fragments.FragmentNote;
 import com.aashiz.ercroutine.fragments.MainFragment;
@@ -37,15 +31,8 @@ import com.aashiz.ercroutine.fragments.PopUpFactory;
 import com.aashiz.ercroutine.fragments.ScheduleFragment;
 import com.aashiz.ercroutine.fragments.SyllabusFragment;
 import com.aashiz.ercroutine.utilities.DataReader;
-import com.aashiz.ercroutine.utilities.OnSwipeTouchListener;
 import com.aashiz.ercroutine.utilities.UpdaterService;
 import com.aashiz.ercroutine.utilities.UpdaterServiceApp;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.HashMap;
 
@@ -59,7 +46,7 @@ public class MainActivity extends AppCompatActivity
     DisplayMetrics dm ;
     private String department ;
     private String year ;
-    private FirebaseAnalytics mFirebase ;
+//    private FirebaseAnalytics mFirebase ;
     private int lastOpened ;
     public static int CLASS_SCHEDULE = R.id.nav_schedule, EXAM_ROUTINE = R.id.nav_routine , NOTES = R.id.nav_notes , SYLLABUS = R.id.nav_syllabus,ABOUT =R.id.nav_about;
     HashMap <String,String> map = new HashMap<>();
@@ -90,7 +77,7 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-    InterstitialAd interad ;
+//    InterstitialAd interad ;
 
 
 
@@ -116,7 +103,7 @@ public class MainActivity extends AppCompatActivity
             return;
         }
 
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3059651012850041~9878199816");
+//        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3059651012850041~9878199816");
         //Get Data from Internal Storages
         setContentView(R.layout.activity_main);
         SharedPreferences set = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -145,30 +132,30 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
-        interad = new InterstitialAd(this);
-        interad.setAdUnitId("ca-app-pub-3059651012850041/6823341811");
-        interad.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                Log.d("ADV","Advertisement loaded...");
-            }
-
-            @Override
-            public void onAdClosed() {
-                requestNewInterstitial();
-
-            }
-        });
-
-        mFirebase  = FirebaseAnalytics.getInstance(this);
-        mFirebase.setUserProperty(USERPROPERTY,department +"-"+ year );
-        Log.d("DEBUG","Selectedfragment = "+selectedFragment);
-
+//        AdView mAdView = (AdView) findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+//
+//        interad = new InterstitialAd(this);
+//        interad.setAdUnitId("ca-app-pub-3059651012850041/6823341811");
+//        interad.setAdListener(new AdListener() {
+//            @Override
+//            public void onAdLoaded() {
+//                super.onAdLoaded();
+//                Log.d("ADV","Advertisement loaded...");
+//            }
+//
+//            @Override
+//            public void onAdClosed() {
+//                requestNewInterstitial();
+//
+//            }
+//        });
+//
+//        mFirebase  = FirebaseAnalytics.getInstance(this);
+//        mFirebase.setUserProperty(USERPROPERTY,department +"-"+ year );
+//        Log.d("DEBUG","Selectedfragment = "+selectedFragment);
+//
 
         //Pre loading syllabus fragment
       preload();
@@ -201,13 +188,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-
-        interad.loadAd(adRequest);
-
-
-        Log.d("ADV","AD requested intestitiial " +interad.getAdUnitId());
+//        AdRequest adRequest = new AdRequest.Builder()
+//                .build();
+//
+//        interad.loadAd(adRequest);
+//
+//
+//        Log.d("ADV","AD requested intestitiial " +interad.getAdUnitId());
 
     }
 
@@ -252,9 +239,9 @@ public class MainActivity extends AppCompatActivity
                 new SilentUpdater(this).execute(new UpdaterService(this, department, year, selectedFragment));
                 nflag = true ;
             }
-            if(interad.isLoaded()){
-                interad.show();
-            }
+//            if(interad.isLoaded()){
+//                interad.show();
+//            }
         }else if(id == ABOUT){
             mainfrag= new About();
             st.replace(R.id.fragment,mainfrag);
@@ -420,7 +407,6 @@ public class MainActivity extends AppCompatActivity
         }
         return false;
     }
-
 
 
 
